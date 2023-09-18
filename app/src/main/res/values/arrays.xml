@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="customer_on_boarding_titles">
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+    </string-array>
+    <string-array name="customer_on_boarding_texts">
+        <item>akhg;kjwrhfj;gah;kfgjha;kjhf;ajkhf</item>
+        <item>a;khgjahf;jadshf;hdf;hafhd;kfasf</item>
+        <item>jk;hfa;khfjhfkjasdf;kldsjf;jsdf;kjasd;f</item>
+    </string-array>
+    <string-array name="business_on_boarding_titles">
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+    </string-array>
+    <string-array name="business_on_boarding_texts">
+        <item>akhg;kjwrhfj;gah;kfgjha;kjhf;ajkhf</item>
+        <item>a;khgjahf;jadshf;hdf;hafhd;kfasf</item>
+        <item>jk;hfa;khfjhfkjasdf;kldsjf;jsdf;kjasd;f</item>
+    </string-array>
+</resources>

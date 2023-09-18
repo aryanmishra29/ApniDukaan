@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name_eng">ApniDukaan</string>
+    <string name="title_shop_eng">Shop</string>
+    <string name="title_cart_eng">Cart</string>
+    <string name="title_profile_eng">Profile</string>
+    <string name="title_feed_eng">Feed</string>
+    <string name="title_orders_eng">Orders</string>
+    <string name="title_my_store_eng">My Store</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
