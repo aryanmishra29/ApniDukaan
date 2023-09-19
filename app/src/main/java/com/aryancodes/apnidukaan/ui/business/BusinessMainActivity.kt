@@ -3,6 +3,9 @@ package com.aryancodes.apnidukaan.ui.business
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.PopupMenu
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -18,6 +21,45 @@ import com.aryancodes.apnidukaan.ui.customer.shop.CustomerShopFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BusinessMainActivity : AppCompatActivity() {
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.action_language ->{
+                showLanguageMenu()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
+    }
+
+    private fun showLanguageMenu() {
+        val popupMenu = PopupMenu(this, findViewById(R.id.action_language))
+        popupMenu.inflate(R.menu.language_menu)
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.language_english -> {
+                    true
+                }
+                R.id.language_hindi -> {
+                    true
+                }
+                R.id.language_bengali -> {
+                    true
+                }
+                R.id.language_urdu -> {
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
+    }
     private lateinit var binding: ActivityBusinessMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

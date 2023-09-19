@@ -1,14 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.onboarding.UserTypeFragment">
 
-    <TextView
-        android:gravity="center"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="User Type" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_i_am_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="I am a"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_type_customer_card"
+            android:layout_width="244dp"
+            android:layout_height="244dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="200dp"
+            android:elevation="4dp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_i_am_a"
+            android:backgroundTint="@color/theme_color">
+            <androidx.cardview.widget.CardView
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                app:cardCornerRadius="200dp"
+                android:backgroundTint="@color/theme_color_secondary"
+                android:layout_gravity="center"
+                app:cardElevation="10dp">
+
+                <ImageButton
+                    android:layout_width="169dp"
+                    android:layout_height="169dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_customer"
+                    android:scaleType="fitCenter"
+                    android:backgroundTint="@color/theme_color_secondary"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/user_type_customer_card"
+            android:text="Customer"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_type_business_card"
+            android:layout_width="244dp"
+            android:layout_height="244dp"
+            app:cardCornerRadius="200dp"
+            android:elevation="4dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_type_customer_card"
+            android:backgroundTint="@color/theme_color">
+            <androidx.cardview.widget.CardView
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                app:cardCornerRadius="200dp"
+                android:backgroundTint="@color/theme_color_secondary"
+                android:layout_gravity="center"
+                app:cardElevation="10dp">
+                <ImageButton
+                    android:layout_width="169dp"
+                    android:layout_height="169dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_business"
+                    android:scaleType="fitCenter"
+                    android:backgroundTint="@color/theme_color_secondary"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tv_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/user_type_business_card"
+            android:text="Business Owner"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

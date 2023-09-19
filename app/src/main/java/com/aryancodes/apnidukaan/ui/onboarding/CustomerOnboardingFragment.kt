@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.aryancodes.apnidukaan.R
+import com.aryancodes.apnidukaan.adapter.OnboardingAdapter
 import com.aryancodes.apnidukaan.databinding.FragmentCustomerOnboardingBinding
 
 class CustomerOnboardingFragment : Fragment() {
@@ -34,7 +35,7 @@ class CustomerOnboardingFragment : Fragment() {
 
         val numberOfScreens = resources.getStringArray(R.array.customer_on_boarding_titles).size
         val onBoardingAdapter = OnboardingAdapter(requireActivity(), numberOfScreens, OnboardingType.CUSTOMER)
-        (activity as AppCompatActivity).supportActionBar!!.hide()
+        (activity as AppCompatActivity).supportActionBar?.hide()
         binding.viewpagerCustomerOnboarding.adapter = onBoardingAdapter
         binding.viewpagerCustomerOnboarding.registerOnPageChangeCallback(onBoardingPageChangeCallback)
 

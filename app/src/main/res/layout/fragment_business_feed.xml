@@ -5,12 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.business.feed.BusinessFeedFragment">
 
-
-    <TextView
-        android:id="@+id/feed_text"
-        android:gravity="center"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/business_feed_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text= "@string/title_feed_eng" />
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>

@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.aryancodes.apnidukaan.R
+import com.aryancodes.apnidukaan.adapter.OnboardingAdapter
 import com.aryancodes.apnidukaan.databinding.FragmentBusinessOnboardingBinding
-import com.aryancodes.apnidukaan.databinding.FragmentCustomerOnboardingBinding
 
 class BusinessOnboardingFragment : Fragment() {
 

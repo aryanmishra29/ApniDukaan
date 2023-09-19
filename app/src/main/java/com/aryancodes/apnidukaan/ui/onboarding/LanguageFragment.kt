@@ -16,12 +16,8 @@ private val Context.dataStore by preferencesDataStore(
     name = "userData"
 )
 class LanguageFragment : Fragment() {
-    private var _binding: FragmentLanguageBinding? = null
-
     private lateinit var dataStoreRepository: DataStoreRepository
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private var _binding: FragmentLanguageBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
