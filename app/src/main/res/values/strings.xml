@@ -10,5 +10,12 @@
     <string name="title_hindi">Hindi</string>
     <string name="title_urdu">Urdu</string>
     <string name="title_bengali">Bengali</string>
+    <string name="title_i_am_a">I am a</string>
+    <string name="title_customer">Customer</string>
+    <string name="title_business_owner">Business Owner</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="business_feed_1_sample">अपने   छोटे  व्यवसाय को बढ़ाने के लिए 6 तरीके !</string>
+    <string name="business_feed_2_sample">अपने   छोटे  व्यवसाय को बढ़ाने के लिए !</string>
+    <string name="business_feed_3_sample">अपने   छोटे  व्यवसाय को बढ़ाने के लिए !</string>
+
 </resources>

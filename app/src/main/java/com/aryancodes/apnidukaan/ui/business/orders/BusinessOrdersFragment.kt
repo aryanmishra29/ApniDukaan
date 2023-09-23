@@ -28,9 +28,6 @@ class BusinessOrdersFragment : Fragment() {
         _binding = FragmentBusinessOrdersBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        businessOrdersViewModel.text.observe(viewLifecycleOwner){
-            binding.ordersText.text = it
-        }
 
         return root
     }

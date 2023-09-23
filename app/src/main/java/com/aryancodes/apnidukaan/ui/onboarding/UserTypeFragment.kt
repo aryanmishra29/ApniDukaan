@@ -1,27 +1,24 @@
 package com.aryancodes.apnidukaan.ui.onboarding
 
 import android.content.Context
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.core.preferencesOf
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.aryancodes.apnidukaan.R
-import com.aryancodes.apnidukaan.databinding.FragmentLanguageBinding
 import com.aryancodes.apnidukaan.databinding.FragmentUserTypeBinding
 import com.aryancodes.apnidukaan.repository.DataStoreRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
 private val Context.dataStore by preferencesDataStore(
@@ -43,11 +40,7 @@ class UserTypeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         dataStoreRepository = DataStoreRepository(requireContext().dataStore)
-        val onboardingViewModel : OnboardingViewModel by viewModels<OnboardingViewModel> {
-            viewModelFactory {
-                OnboardingViewModel(dataStoreRepository)
-            }
-        }
+        val onboardingViewModel = ViewModelProvider(this, OnboardingViewModelFactory(dataStoreRepository))[OnboardingViewModel::class.java]
 
         _binding = FragmentUserTypeBinding.inflate(inflater, container, false)
         val root: View = binding.root

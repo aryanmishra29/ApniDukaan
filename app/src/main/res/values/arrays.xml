@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="customer_on_boarding_titles">
-        <item>Title 1</item>
-        <item>Title 2</item>
-        <item>Title 3</item>
+        <item name="customer_onboarding_title_1">Shop at peace</item>
+        <item name="customer_onboarding_title_2">Choose between stores</item>
+        <item name="customer_onboarding_title_3">Pay online, keep a record of your receipts</item>
+        <item name="customer_onboarding_title_4">Let\'s get started!</item>
     </string-array>
     <string-array name="customer_on_boarding_texts">
-        <item>akhg;kjwrhfj;gah;kfgjha;kjhf;ajkhf</item>
-        <item>a;khgjahf;jadshf;hdf;hafhd;kfasf</item>
-        <item>jk;hfa;khfjhfkjasdf;kldsjf;jsdf;kjasd;f</item>
+
+        <item name="customer_onboarding_text_1">Now you can create a checkout list of times you wish to buy from your local stores and have them ready packed upon your arrival, or get a home delivery done.</item>
+        <item name="customer_onboarding_text_2">You can search for a specific product and see which stores have it, compare prices, be more efficient.  </item>
+        <item name="customer_onboarding_text_3">Make payments to your stores once you’ve checked out, maintain a track of invoices and items.
+Helping you efficiently analyze your budget.
+</item>
+        <item name="customer_onboarding_text_4">Buy whatever you wish to from whichever corner of the city, on a single tap from your home.</item>
     </string-array>
+
+
     <string-array name="business_on_boarding_titles">
-        <item>Title 1</item>
-        <item>Title 2</item>
-        <item>Title 3</item>
+        <item>Connect to your customers</item>
+        <item>Your inventory here</item>
+        <item>Get Business Insights</item>
+        <item>Let\'s Get Started!</item>
     </string-array>
     <string-array name="business_on_boarding_texts">
-        <item>akhg;kjwrhfj;gah;kfgjha;kjhf;ajkhf</item>
-        <item>a;khgjahf;jadshf;hdf;hafhd;kfasf</item>
-        <item>jk;hfa;khfjhfkjasdf;kldsjf;jsdf;kjasd;f</item>
+        <item>Now your customers can place orders and connect just using this app.</item>
+        <item>List the items available at your shops, prices and your business hours.</item>
+        <item>Manage your stocks and accounts via this app, set reminders, send due updates and more... </item>
+        <item>Together, as a united community,
+we have the power to
+make a profound difference</item>
     </string-array>
 </resources>

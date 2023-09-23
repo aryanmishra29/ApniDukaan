@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.aryancodes.apnidukaan.databinding.FragmentLanguageBinding
 import com.aryancodes.apnidukaan.repository.DataStoreRepository
@@ -27,11 +28,7 @@ class LanguageFragment : Fragment() {
     ): View {
 
         dataStoreRepository = DataStoreRepository(requireContext().dataStore)
-        val languageViewModel : OnboardingViewModel by viewModels<OnboardingViewModel> {
-            viewModelFactory {
-                OnboardingViewModel(dataStoreRepository)
-            }
-        }
+        val onboardingViewModel = ViewModelProvider(this, OnboardingViewModelFactory(dataStoreRepository))[OnboardingViewModel::class.java]
 
         _binding = FragmentLanguageBinding.inflate(inflater, container, false)
         val root: View = binding.root

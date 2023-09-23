@@ -9,9 +9,9 @@ import com.aryancodes.apnidukaan.model.BusinessFeedModel
 
 class BusinessFeedViewModel : ViewModel() {
     private val _feedList = MutableLiveData<ArrayList<BusinessFeedModel>>().apply {
-        value = arrayListOf( BusinessFeedModel(R.drawable.feed_sample_1,"Feed1"),
-            BusinessFeedModel(R.drawable.feed_sample_2, "Feed2"),
-            BusinessFeedModel(R.drawable.feed_sample_3, "Feed3")
+        value = arrayListOf( BusinessFeedModel(R.drawable.feed_sample_1, "अपने   छोटे  व्यवसाय को बढ़ाने के लिए 6 तरीके !"),
+            BusinessFeedModel(R.drawable.feed_sample_2, "अपने   छोटे  व्यवसाय को बढ़ाने के लिए !"),
+            BusinessFeedModel(R.drawable.feed_sample_3, "अपने   छोटे  व्यवसाय को बढ़ाने के लिए !")
         )
     }
     val feedList : LiveData<ArrayList<BusinessFeedModel>> = _feedList

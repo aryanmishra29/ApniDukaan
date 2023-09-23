@@ -20,9 +20,8 @@ class OnboardingActivity : AppCompatActivity() {
 
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        startActivity(Intent(this, BusinessMainActivity::class.java))
         supportFragmentManager.commit {
-            //replace(R.id.onboarding_fragment_container, BusinessOnboardingFragment())
+            replace(R.id.onboarding_fragment_container, UserTypeFragment())
         }
     }
 }

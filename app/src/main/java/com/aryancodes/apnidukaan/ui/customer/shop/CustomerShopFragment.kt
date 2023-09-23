@@ -5,9 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.aryancodes.apnidukaan.adapter.CustomerShopAdapter
 import com.aryancodes.apnidukaan.databinding.FragmentCustomerShopBinding
+import com.aryancodes.apnidukaan.model.CustomerShopModel
 
 class CustomerShopFragment : Fragment() {
 
@@ -27,10 +32,14 @@ class CustomerShopFragment : Fragment() {
 
         _binding = FragmentCustomerShopBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        customerShopViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val shopList = ArrayList<CustomerShopModel>()
+        val shopAdapter = CustomerShopAdapter(shopList)
+        binding.customerShopsRecycler.layoutManager = LinearLayoutManager(activity)
+        binding.customerShopsRecycler.adapter = shopAdapter
+        customerShopViewModel.shopList.observe(viewLifecycleOwner){
+            shopList.clear()
+            shopList.addAll(it)
+            shopAdapter.notifyDataSetChanged()
         }
         return root
     }

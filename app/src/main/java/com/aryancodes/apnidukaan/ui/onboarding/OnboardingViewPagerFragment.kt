@@ -34,10 +34,10 @@ class OnboardingViewPagerFragment : Fragment() {
         val type = requireArguments().get(TYPE)
         val customerOnBoardingTitles = requireContext().resources.getStringArray(R.array.customer_on_boarding_titles)
         val customerOnBoardingTexts = requireContext().resources.getStringArray(R.array.customer_on_boarding_texts)
-        val businessOnBoardingTitles = requireContext().resources.getStringArray(R.array.customer_on_boarding_titles)
-        val businessOnBoardingTexts = requireContext().resources.getStringArray(R.array.customer_on_boarding_texts)
+        val businessOnBoardingTitles = requireContext().resources.getStringArray(R.array.business_on_boarding_titles)
+        val businessOnBoardingTexts = requireContext().resources.getStringArray(R.array.business_on_boarding_texts)
         when(type) {
-            is OnboardingType.CUSTOMER -> {
+            OnboardingType.CUSTOMER -> {
                 val onBoardingImages = getOnBoardAssetsLocationCustomer()
                 with(binding) {
                     onBoardingImage.setImageResource(onBoardingImages[position])
@@ -46,7 +46,7 @@ class OnboardingViewPagerFragment : Fragment() {
                 }
 
             }
-            is OnboardingType.BUSINESS -> {
+            OnboardingType.BUSINESS -> {
                 val onBoardingImages = getOnBoardAssetsLocationBusiness()
                 with(binding) {
                     onBoardingImage.setImageResource(onBoardingImages[position])
@@ -63,6 +63,7 @@ class OnboardingViewPagerFragment : Fragment() {
         onBoardAssets.add(R.drawable.customer_onboarding_1)
         onBoardAssets.add(R.drawable.customer_onboarding_2)
         onBoardAssets.add(R.drawable.customer_onboarding_3)
+        onBoardAssets.add(R.drawable.customer_onboarding_4)
         return onBoardAssets
     }
     private fun getOnBoardAssetsLocationBusiness(): List<Int> {
@@ -70,6 +71,7 @@ class OnboardingViewPagerFragment : Fragment() {
         onBoardAssets.add(R.drawable.business_onboarding_1)
         onBoardAssets.add(R.drawable.business_onboarding_2)
         onBoardAssets.add(R.drawable.business_onboarding_3)
+        onBoardAssets.add(R.drawable.business_onboarding_4)
         return onBoardAssets
     }
 }
