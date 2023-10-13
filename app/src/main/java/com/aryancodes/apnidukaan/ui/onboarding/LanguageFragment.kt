@@ -13,9 +13,6 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import com.aryancodes.apnidukaan.databinding.FragmentLanguageBinding
 import com.aryancodes.apnidukaan.repository.DataStoreRepository
 
-private val Context.dataStore by preferencesDataStore(
-    name = "userData"
-)
 class LanguageFragment : Fragment() {
     private lateinit var dataStoreRepository: DataStoreRepository
     private var _binding: FragmentLanguageBinding? = null
@@ -27,7 +24,7 @@ class LanguageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        dataStoreRepository = DataStoreRepository(requireContext().dataStore)
+        dataStoreRepository = DataStoreRepository(requireContext())
         val onboardingViewModel = ViewModelProvider(this, OnboardingViewModelFactory(dataStoreRepository))[OnboardingViewModel::class.java]
 
         _binding = FragmentLanguageBinding.inflate(inflater, container, false)

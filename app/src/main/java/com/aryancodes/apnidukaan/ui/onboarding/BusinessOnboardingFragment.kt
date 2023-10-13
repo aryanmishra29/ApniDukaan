@@ -12,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.aryancodes.apnidukaan.R
 import com.aryancodes.apnidukaan.adapter.OnboardingAdapter
 import com.aryancodes.apnidukaan.databinding.FragmentBusinessOnboardingBinding
+import com.aryancodes.apnidukaan.ui.authentication.AuthenticationActivity
 import com.aryancodes.apnidukaan.ui.business.BusinessMainActivity
 import com.aryancodes.apnidukaan.ui.customer.CustomerMainActivity
 
@@ -55,10 +56,10 @@ class BusinessOnboardingFragment : Fragment() {
             }
         }
         binding.btnBusinessOnboardingSkip.setOnClickListener {
-            startActivity(Intent(context, BusinessMainActivity::class.java))
+            startActivity(Intent(context, AuthenticationActivity::class.java))
         }
         binding.btnBusinessOnboardingStart.setOnClickListener {
-            startActivity(Intent(context, BusinessMainActivity::class.java))
+            startActivity(Intent(context, AuthenticationActivity::class.java))
         }
 
         return binding.root

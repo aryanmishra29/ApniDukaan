@@ -13,23 +13,25 @@
         android:theme="@style/Theme.ApniDukaan.Starting"
         tools:targetApi="31">
         <activity
-            android:name=".ui.business.BusinessMainActivity"
+            android:name=".ui.authentication.AuthenticationActivity"
             android:exported="false"
             android:theme="@style/Theme.ApniDukaan"/>
+        <activity
+            android:name=".ui.business.BusinessMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ApniDukaan" />
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.customer.CustomerMainActivity"
             android:exported="false"
-            android:theme="@style/Theme.ApniDukaan"/>
-
+            android:theme="@style/Theme.ApniDukaan" />
     </application>
 
 </manifest>

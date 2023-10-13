@@ -17,9 +17,6 @@ import com.aryancodes.apnidukaan.model.CustomerShopModel
 class CustomerShopFragment : Fragment() {
 
     private var _binding: FragmentCustomerShopBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(

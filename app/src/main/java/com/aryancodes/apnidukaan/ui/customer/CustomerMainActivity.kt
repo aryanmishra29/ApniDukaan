@@ -15,6 +15,7 @@ import com.aryancodes.apnidukaan.databinding.ActivityCustomerMainBinding
 import com.aryancodes.apnidukaan.ui.customer.cart.CustomerCartFragment
 import com.aryancodes.apnidukaan.ui.customer.profile.CustomerProfileFragment
 import com.aryancodes.apnidukaan.ui.customer.shop.CustomerShopFragment
+import com.aryancodes.apnidukaan.util.AndroidUtil
 
 class CustomerMainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -82,9 +83,7 @@ class CustomerMainActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: Fragment): Boolean {
-        supportFragmentManager.commit {
-            replace(R.id.customer_fragment_container, fragment)
-        }
+        AndroidUtil.replaceFragment(this, R.id.customer_fragment_container, fragment)
         return true
     }
 }
